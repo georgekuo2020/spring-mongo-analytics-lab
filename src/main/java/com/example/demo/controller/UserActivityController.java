@@ -25,4 +25,9 @@ public class UserActivityController {
     public SuccessfullyResponse<?> recordActivity() {
         return new SuccessfullyResponse<>("ok", userActivityService.listAll());
     }
+
+    @GetMapping("/list/top/article")
+    public SuccessfullyResponse<?> getTopArticles() {
+        return new SuccessfullyResponse<>("ok", userActivityService.getTopArticles());
+    }
 }
